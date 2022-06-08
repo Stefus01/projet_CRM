@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;600&family=Goldman&display=swap');/*font-family: 'Goldman', cursive;*/
+
+html{
+    height: 250vh; 
+}
+    
+h2, h3{
+    color:#000000 ;
+    margin: 2rem;
+    font-family: 'Goldman';
+    text-align: center;
+}
+

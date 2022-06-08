@@ -1,0 +1,7 @@
+creation projet
+creation app
+ajout app dans les settings du projet
+configuration des urls du projet vers l'application
+association url/view "home"
+définition fonction view "home" : rendu de la requête sur le template
+création template

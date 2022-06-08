@@ -1,0 +1,27 @@
+Dashboard : fonctionnalité de présentation
+Nb de produits vendu ce jour
+nb de clients
+CA de la journée
+10 dernieres commandes
+10 derniers clients
+
+Gestion des informations des clients, des commandes, du catalogue produit. 
+Client : nom, prénom, sexe, age, addresse postale, téléphone, email
+Commande : date de création, produit(s), quantité (?), client, statut de la commande(en préparation, envoyée, réceptionnée), prix Total TTC, prix ht
+Produit : nom, prix unitaire, qté, catégorie
+Promotion : article, remise, date d'échéance
+
+Fonctionnalités : 
+
+boutton de promo automatique de 10% pendant une semaine
+envoie de mail de relance à un client après 10 jours sans commande. 
+suivie de l'expiration des promotions et corrections automatique de l'affichage des prix
+affichage des produits de même catégorie
+
+affichage des données d'un client spécifique
+affichage du détails d'une commande spécifique
+affichage du détails d'un produits
+
+modification des données d'un client (ajout, update, suppression)
+modificaiton des données d'un article (ajout, update, suppression)
+modificaiton des données d'une commande (ajout, update, suppression)
