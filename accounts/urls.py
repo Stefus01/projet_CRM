@@ -1,7 +1,4 @@
 from django.urls import path
-from accounts.forms import VenueForm
-
-from accounts.models import Venue
 from . import views
 urlpatterns = [
 	path('', views.home),

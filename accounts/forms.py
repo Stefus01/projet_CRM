@@ -11,5 +11,5 @@ class VenueForm(ModelForm):
 class ClientForm(ModelForm):
     class Meta: #define things in clasx for django
         model=Client
-        fields =('first_name','last_name','age','Address','')
+        fields =('first_name','last_name','age','address','email','phone')
         

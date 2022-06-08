@@ -13,7 +13,7 @@ def client(request):
 		form= ClientForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect('/client?submitted=True')
+			return HttpResponseRedirect('/client_template/?submitted=True')
 	else:
 		form= ClientForm
 		if 'submitted' in request.GET:
