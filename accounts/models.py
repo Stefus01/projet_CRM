@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Venue(models.Model):
-    name=models.CharField('Venue Name',max_length=30)
-    address=models.CharField('Venue Address',max_length=300)
+    name=models.CharField(' Name',max_length=30)
+    address=models.CharField(' Address',max_length=300)
     phone=models.CharField(max_length=14)
 
     def __str__(self):  #allow us to pop up on the page
