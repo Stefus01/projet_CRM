@@ -26,6 +26,7 @@ class Produit(models.Model):
     name=models.CharField('Nom du produit',max_length=200)
     type=models.CharField('Type de produit',max_length=200)
     quantity=models.CharField('Quantité',max_length=4)
+    disponibility=models.CharField('Disponible',max_length=5)
     price=models.CharField('Prix',max_length=7)
 
     def __str__(self):  #allow us to pop up on the page
