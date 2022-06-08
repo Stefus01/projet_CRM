@@ -1,31 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/client.css">
-    <title>Client</title>
-</head>
- <body>
-   
-    <h2>Bienvenue sur la page client!</h2>
-    <br>
 
-    <article class="bts_aceuil">
-      <button type="button" class="btn btn-primary"><a href="" target="_blank"> Commandes</a></button>
-      <button type="button" class="btn btn-primary"><a href="" target="_blank"> Produits</a></button>
-      <button type="button" class="btn btn-primary"><a href="http://127.0.0.1:8000" target="_blank"> Accueil</a></button>
-    </article>
+    % extends 'client_template.hmtl' %
+
+    % block content % 
+        <title>Client</title>
+        <h1> Add Client To Database</h1>
+        <br/></br>
+        {% if submitted %}
+            Your Venue Was submitted Succefully!!!
+        {% else %}
     
-     <p>
-      <h1> Add Client To Database</h1>
-      <br/></br>
-      <form action="" method="POST"> 
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Submit" class="btn btn-primary">
-      </form>
-       
-     </p>
-    </body>
+        {% endif %}
+            <form action="" method="POST"> 
+                {% csrf_token %}
+    
+                {{form.as_p}}
+    
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </form>
+    
+    % endblock %
+ 

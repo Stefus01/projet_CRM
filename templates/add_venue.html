@@ -1,19 +1,20 @@
 % extends 'add-venue.html' %
 
 % block content % 
+    <title>Venue</title>
     <h1> Add Client To Database</h1>
     <br/></br>
-    % if submitted %
+    {% if submitted %}
+        Your Venue Was submitted Succefully!!!
+    {% else %}
 
-    % else %
+    {% endif %}
+        <form action="" method="POST"> 
+            {% csrf_token %}
 
-    % endif %
-    <form action="" method="POST"> 
-        % csrf_token %
+            {{form.as_p}}
 
-        {{form.as_p}}
-
-        <input type="submit" value="Submit" class="btn btn-primary">
-    </form>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
 
 % endblock %

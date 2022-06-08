@@ -1,7 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from .forms import VenueForm
-# from .forms import Client
+from .forms import ClientForm, VenueForm
 
 # Create your views here.
 
@@ -9,7 +8,17 @@ def home(request):
 	return render(request, 'home_template.html')
 
 def client(request):
-	return render(request,'client_template.html')
+	submitted=False
+	if request.method == "POST":
+		form= ClientForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return HttpResponseRedirect('/client?submitted=True')
+	else:
+		form= ClientForm
+		if 'submitted' in request.GET:
+			submitted=True
+	return render(request,'client_template.html',{'form':form, 'submitted':submitted})
 
 def add_venue(request):
 	submitted=False
