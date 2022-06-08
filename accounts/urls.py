@@ -6,5 +6,5 @@ from . import views
 urlpatterns = [
 	path('', views.home),
 	path('client_template/',views.client),
-	path('add_venue/',views.VenueForm),
+	path('add_venue/',views.add_venue,name='add-venue'),
 ]

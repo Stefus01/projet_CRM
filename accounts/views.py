@@ -10,5 +10,6 @@ def home(request):
 def client(request):
 	return render(request,'client_template.html')
 
-def VenueForm(request):
-	return render(request,'add_venue.html')
+def add_venue(request):
+	form= VenueForm
+	return render(request,'add_venue.html',{'form':form})
