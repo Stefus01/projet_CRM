@@ -1,33 +1,21 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client</title>
-</head>
-<body>
-    
-</body>
-</html> -->
-
-% extends 'client_template.hmtl' %
-
-    % block content %
+{% extends 'base.html' %}
+    <link href="/static/css/home.css" rel="stylesheet" >
+    {% block content %}
         <title>Client</title>
-        <h1> Add Client To Database</h1>
+        <h1> Ajouter un client</h1>
         <br/></br>
-        {% if submitted %}
-            Your client infos was submitted Succefully !
-        {% else %}
-            An error has occurred during the submit!
-        {% endif %}
-            <form action="" method="POST"> 
-                {% csrf_token %}
-    
-                {{form.as_p}}
-    
-                <input type="submit" value="Submit" class="btn btn-primary">
-            </form>
-    
-    % endblock content %
+        <body>
+            {% if submitted %}
+                Your client infos was submitted Succefully !
+            {% else %}
+                Veuillez remplir le formulaire.
+            {% endif %}
+                <form action="" method="POST"> 
+                    {% csrf_token %}
+        
+                    {{form.as_p}}
+        
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </form>
+        </body>    
+    {% endblock content %}

@@ -4,10 +4,8 @@ html{
     height: 250vh; 
 }
     
-h2, h3{
-
-    color:#000000 ;
-    margin: 2rem;
-    font-family: 'Goldman';
-    text-align: center;
+body{
+    padding: 0;                /*met espace à 0*/
+    justify-content: space-evenly;
+    margin: auto;
 }

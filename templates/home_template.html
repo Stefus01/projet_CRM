@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Aquarella</title>
-</head>
-<body>
-	<h2>Bienvenue sur la page d'Aquarella!</h2>
-    <br>
+{% extends 'base.html' %}
+<title>Home</title>
+{% block content %}
+<link rel="stylesheet" href="/static/css/home.css">
 
-    <article class="bts_aceuil">
-      <button type="button" class="btn btn-primary"><a href="" target="_blank"> Commandes</a></button>
-      <button type="button" class="btn btn-primary"><a href="" target="_blank"> Produits</a></button>
-      <button type="button" class="btn btn-primary"><a href="add_venue" target="_blank"> Venue</a></button>
-      <button type="button" class="btn btn-primary"><a href="client_template" target="_blank"> Client</a></button>
-	  <button type="button" class="btn btn-primary"><a href="http://127.0.0.1:8000/admin/" target="_blank"> Admin</a></button>
-    </article>
+<h3>Bienvenue sur la page d'Aquarella!</h3>
+<br>
 
-</body>
-</html>
+<article id="bts_aceuil" class="bts_aceuil">
+  <a class="btn btn-primary" href="http://127.0.0.1:8000/admin/" target="_blank" role="button">Admin</a>
+  <a class="btn btn-primary" href="client_template" target="_blank" role="button">Ajouter un Client</a>
+  <!-- <a class="btn btn-primary" href="http://127.0.0.1:8000/admin/" target="_blank" role="button">Crée compte Client</a> -->
+  <a class="btn btn-primary" href="" target="_blank" role="button">Produits</a>
+  <a class="btn btn-primary" href="" target="_blank" role="button">Commandes</a>
+</article>    
+{% endblock content %}
