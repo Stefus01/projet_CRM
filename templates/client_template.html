@@ -1,21 +1,22 @@
 {% extends 'base.html' %}
-    <link href="/static/css/home.css" rel="stylesheet" >
     {% block content %}
-        <title>Client</title>
+    <title>Client</title>
+    <center>
+
         <h1> Ajouter un client</h1>
         <br/></br>
-        <body>
-            {% if submitted %}
-                Your client infos was submitted Succefully !
-            {% else %}
-                Veuillez remplir le formulaire.
-            {% endif %}
-                <form action="" method="POST"> 
-                    {% csrf_token %}
-        
-                    {{form.as_p}}
-        
-                    <input type="submit" value="Submit" class="btn btn-primary">
-                </form>
-        </body>    
+    
+        {% if submitted %}
+            <h2>Your client infos was submitted Succefully !</h2>
+        {% else %}
+            Veuillez remplir le formulaire.
+        {% endif %}
+            <form action="" method="POST"> 
+                <br/>
+                {% csrf_token %}
+                {{form.as_p}}
+
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </form> 
+    </center>
     {% endblock content %}
