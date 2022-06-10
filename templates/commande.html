@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<title>Commandes</title>
+<center><h2>Liste produit</h2></center>
+<br/>
+<table style="margin: auto; width: auto;" class="table table-bordered table-striped table-hover">
+<thead>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col">numéro de commande</th>
+        <th scope="col">numéro client</th>
+        <th scope="col">nom client</th>
+        <th scope="col">total</th>
+    </tr>
+</thead>
+{% for commandes in liste_commandes %}
+<tbody>
+    <tr>
+        <th scope="col"></th>
+        <td>{{commandes.num_order}}</td>
+        <td>{{commandes.num_cli}}</td>
+        <td>{{commandes.name_cli}}</td>
+        <td>{{commandes.total}}</td>
+    </tr>
+</tbody>
+{% endfor %}
+</table>
+{% endblock content %}

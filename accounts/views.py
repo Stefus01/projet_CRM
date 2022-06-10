@@ -1,13 +1,18 @@
 from multiprocessing import Event
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from .models import Client,Produit
+from .models import Client,Produit,Commande
 from .forms import ClientForm, VenueForm
 
 # Create your views here.
 
 def home(request):
 	return render(request, 'home_template.html')
+
+def commande(request):
+	cr_commande=Commande.objects.all()
+	context={'liste_commandes':cr_commande}
+	return render(request, 'commande.html', context)
 
 def produit(request):
 	all_fields = Produit.objects.all()
@@ -43,3 +48,4 @@ def add_venue(request): #test/ example
 		if 'submitted' in request.GET:
 			submitted=True
 	return render(request,'add_venue.html',{'form':form, 'submitted':submitted})
+

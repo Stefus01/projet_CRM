@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="http://127.0.0.1:8000">Aquarella</a>
+      
+      <a class="navbar-brand" href="% url 'home' %}">Aquarella</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -10,35 +11,26 @@
           <li class="nav-item">
             <a class="nav-link" href="http://127.0.0.1:8000/admin/" target="_blank" role="button">Admin</a>
           </li>
-
+          
           <li class="nav-item">
             <a class="nav-link" href="{% url 'produit' %}" target="_blank" role="button">Produits</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank" role="button">Commandes</a>
+            <a class="nav-link" href="{% url 'commande' %}" target="_blank" role="button">Commandes</a>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Client</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="http://127.0.0.1:8000/client_template/" target="_blank">Ajouter</a></li>
+              <li><a class="dropdown-item" href="{% url 'client' %}" target="_blank">Ajouter</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:8000/liste_de_client/" target="_blank">Liste</a></li>
-            </ul>
-          </li> 
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">User</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{% url 'login' %}" target="_blank">Créer</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:8000/liste_de_user/" target="_blank">Liste</a></li>
+              <li><a class="dropdown-item" href="{% url 'liste_client' %}" target="_blank">Liste</a></li>
             </ul>
           </li> 
 
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Beta</a>
 
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Beta</a>
         </ul>
         
         <form class="d-flex">

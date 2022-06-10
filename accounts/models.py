@@ -31,3 +31,12 @@ class Produit(models.Model):
 
     def __str__(self):  #allow us to pop up on the page
         return self.name
+
+class Commande(models.Model):
+    num_order=models.CharField('num_commande',max_length=8)
+    num_cli=models.CharField('num_cli',max_length=8)
+    name_cli=models.CharField('nom_cli',max_length=50)
+    total=models.CharField('total',max_length=7)
+
+    def __str__(self):  #allow us to pop up on the page
+        return self.num_order
