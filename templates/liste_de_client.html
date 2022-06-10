@@ -1,11 +1,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <center>
-    <h3>Liste clients</h3>
-    {% for liste_de_client in client_list%}
-        {{ liste_de_client }}<br/> 
-    {% endfor %}
 
-    </center>
+    <h3>Liste clients</h3>
+    <br/>
+    <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Email</th>
+          <th scope="col">Addresse</th>
+          <th scope="col">Phone</th>
+        </tr>
+    </thead>
+    <table class="table table-bordered table-striped table-dark table-hover">
+        <!-- Affiche tout les noms dans la table client + age mail address phone -->
+        {% for liste_de_client in client_list%}
+        <tbody>
+            <tr>
+              <td>{{ liste_de_client }}</td>
+              <td>{{liste_de_client.age}}</td>
+              <td>{{liste_de_client.email}}</td>
+              <td>{{liste_de_client.address}}</td>
+              <td>{{liste_de_client.phone}}</td>
+            </tr>
+        </tbody>          
+        {% endfor %}
+    </table>  
+    
 {% endblock content %}
+
+
+

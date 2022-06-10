@@ -9,11 +9,14 @@ from .forms import ClientForm, VenueForm
 def home(request):
 	return render(request, 'home_template.html')
 
-def list_client(request):
+def show_client(request, ):
+	return
+
+def list_client(request): # pour afficher liste client
 	client_list=Client.objects.all() #put all the client object of cleint 
 	return render(request,'liste_de_client.html',{'client_list': client_list})
 
-def client(request):
+def client(request): #pour remplire formulaire client
 	submitted=False
 	if request.method == "POST":
 		form= ClientForm(request.POST)
@@ -26,7 +29,7 @@ def client(request):
 			submitted=True
 	return render(request,'client_template.html',{'form':form, 'submitted':submitted})
 
-def add_venue(request):
+def add_venue(request): #test/ example
 	submitted=False
 	if request.method == "POST":
 		form= VenueForm(request.POST)
