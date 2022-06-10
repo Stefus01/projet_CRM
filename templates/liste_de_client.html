@@ -6,7 +6,7 @@
 <br/>    
 <table class="table table-bordered table-striped table-hover">
     <thead>
-        <tr class="table-dark">
+        <tr class="table">
             <th scope="col"></th>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
@@ -18,7 +18,7 @@
     <!-- Affiche tout les noms dans la table client + age mail address phone -->
     {% for liste_de_client in client_list%}
     <tbody>
-        <tr class="table-dark">
+        <tr class="table-light">
             <th scope="col"></th>
             <td>{{ liste_de_client }}</td>
             <td>{{liste_de_client.age}}</td>
