@@ -11,12 +11,15 @@
         {% else %}
             Veuillez remplir le formulaire.
         {% endif %}
+        <div class="position-relative">
+            <div class="position-absolute top-0 start-0 translate-middle"></div>
+          
             <form action="" method="POST"> 
                 <br/>
                 {% csrf_token %}
                 {{form.as_p}}
-
                 <input type="submit" value="Submit" class="btn btn-primary">
-            </form> 
+            </form>
+        </div>
     </center>
     {% endblock content %}
