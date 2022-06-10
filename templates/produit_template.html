@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<title>Produits</title>
+<table border="1" width="1000">
+<tr>
+  <th>Name</th>
+  <th>Category</th>
+  <th>Quantity</th>
+  <th>Disponibility</th>
+  <th>Price</th>
+</tr>
+{% for champs in champs_liste %}
+<tr>
+  <th> {{ champs.name }}</th>
+  <th> {{ champs.category }}</th>
+  <th> {{ champs.quantity }}</th>
+  <th> {{ champs.disponibility }}</th>
+  <th> {{ champs.price }}</th>
+</tr> 
+{% endfor %}
+</table>
+
+</p>
+{% endblock content %}

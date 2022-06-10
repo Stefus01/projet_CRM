@@ -9,8 +9,10 @@ from .forms import ClientForm, VenueForm
 def home(request):
 	return render(request, 'home_template.html')
 
-def show_client(request, ):
-	return
+def produit(request):
+	all_fields = Produit.objects.all()
+	context = {'champs_liste' : all_fields}
+	return render(request, 'produit_template.html', context)
 
 def list_client(request): # pour afficher liste client
 	client_list=Client.objects.all() #put all the client object of cleint 

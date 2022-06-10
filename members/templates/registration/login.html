@@ -6,6 +6,7 @@
     <form method="post">
         <!-- tag for security -->
       {% csrf_token %} 
+      <!-- render django forms as paragraph -->
       {{ form.as_p }}
       <button type="submit">Log In</button>
     </form>
