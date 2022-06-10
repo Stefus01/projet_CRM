@@ -5,4 +5,4 @@ from django.contrib import messages
 # Create your views here.
 
 def login_user(request):
-    return render(request, 'login.html')
+    return render(request, 'registration/login.html')

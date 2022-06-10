@@ -1,14 +1,13 @@
 {% extends 'base.html' %}
-    {% block content %}
-    <title>Login</title>
+{% block content %}
+<title>Login</title>
 
-    <h2>Log In</h2>
-    <form method="post">
-        <!-- tag for security -->
-      {% csrf_token %} 
-      <!-- render django forms as paragraph -->
-      {{ form.as_p }}
-      <button type="submit">Log In</button>
-    </form>
+<h2>Log In</h2>
+<form method="post">
+    <!-- tag for security -->
+    {% csrf_token %} 
 
+    <button type="submit">Log In</button>
+</form>
+<br/>
 {% endblock content %}

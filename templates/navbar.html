@@ -20,15 +20,6 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">User</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="http://127.0.0.1:8000/user_template/" target="_blank">Créer</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:8000/liste_de_user/" target="_blank">Liste</a></li>
-            </ul>
-          </li> 
-
-          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Client</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="http://127.0.0.1:8000/client_template/" target="_blank">Ajouter</a></li>
@@ -36,6 +27,16 @@
               <li><a class="dropdown-item" href="http://127.0.0.1:8000/liste_de_client/" target="_blank">Liste</a></li>
             </ul>
           </li> 
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">User</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'login' %}" target="_blank">Créer</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/liste_de_user/" target="_blank">Liste</a></li>
+            </ul>
+          </li> 
+
 
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Beta</a>
         </ul>
