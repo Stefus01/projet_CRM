@@ -1,11 +1,17 @@
+from multiprocessing import Event
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from .models import Client,Produit
 from .forms import ClientForm, VenueForm
 
 # Create your views here.
 
 def home(request):
 	return render(request, 'home_template.html')
+
+def list_client(request):
+	client_list=Client.objects.all() #put all the client object of cleint 
+	return render(request,'liste_de_client.html',{'client_list': client_list})
 
 def client(request):
 	submitted=False

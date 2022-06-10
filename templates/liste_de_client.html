@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <center>
+    <h3>Liste clients</h3>
+    {% for liste_de_client in client_list%}
+        {{ liste_de_client }}<br/> 
+    {% endfor %}
+
+    </center>
+{% endblock content %}
