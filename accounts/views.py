@@ -12,16 +12,16 @@ def home(request):
 def commande(request):
 	cr_commande=Commande.objects.all()
 	context={'liste_commandes':cr_commande}
-	return render(request, 'commande.html', context)
+	return render(request, 'Commande.html', context)
 
 def produit(request):
 	all_fields = Produit.objects.all()
 	context = {'champs_liste' : all_fields}
-	return render(request, 'produit_template.html', context)
+	return render(request, 'Produit.html', context)
 
 def list_client(request): # pour afficher liste client
 	client_list=Client.objects.all() #put all the client object of cleint 
-	return render(request,'liste_de_client.html',{'client_list': client_list})
+	return render(request,'Liste-de-client.html',{'client_list': client_list})
 
 def client(request): #pour remplire formulaire client
 	submitted=False
@@ -29,12 +29,12 @@ def client(request): #pour remplire formulaire client
 		form= ClientForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect('/client_template/?submitted=True')
+			return HttpResponseRedirect('/Client/?submitted=True')
 	else:
 		form= ClientForm
 		if 'submitted' in request.GET:
 			submitted=True
-	return render(request,'client_template.html',{'form':form, 'submitted':submitted})
+	return render(request,'Client.html',{'form':form, 'submitted':submitted})
 
 def add_venue(request): #test/ example
 	submitted=False
