@@ -5,3 +5,12 @@ configuration des urls du projet vers l'application
 association url/view "home"
 définition fonction view "home" : rendu de la requête sur le template
 création template
+création de multiples page html home base commande client liste de client produit navbar
+implémenté base de donnée sur le site en forme tableau
+v Remplire base donnée client
+v Remplire base donnée produit
+v Remplire base donnée commande
+v Afficher formulaire client a remplir
+v Afficher liste clients
+v Afficher liste produit
+v Afficher liste commande

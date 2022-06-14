@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>Ajouter Produit</title>
+<center>
+
+<h1> Ajouter un produit</h1>
+<br/></br>
+    
+{% if submitted %}
+<h2>Your product infos was submitted Succefully into the database !</h2>
+{% else %}
+Veuillez remplir le formulaire.
+{% endif %}
+<div class="position-relative">
+    <div class="position-absolute top-0 start-0 translate-middle"></div>
+          
+    <form  style="margin: auto; width: 220px" action="" method="POST"> 
+        <br/>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
+</center>
+{% endblock content %}

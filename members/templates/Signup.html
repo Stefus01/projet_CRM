@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>Sign up</title>
+<center>
+<h3>SignUp (work in progress)</h3><br/>
+{% if submitted %}
+<h2>Your client infos was submitted Succefully into the database !</h2><br/>
+{% else %}
+Enter * required infos.<br/>
+{% endif %}
+<form style="margin: auto; width: 220px" action="/Signup" method="POST">
+    {% csrf_token %}
+    <label for="">Username *</label>
+    <input type="texte" id="username" name="username" placeholder="Enter Username"Required><br/>
+
+    <label for="">First Name</label>
+    <input type="texte" id="fName" name="fName" placeholder="Enter First Name"><br/>
+    
+    <label for="">Last Name </label>
+    <input type="texte" id="lName" name="lName" placeholder="Enter Last Name"><br/>
+
+    <label for="">Email Address *</label>
+    <input type="texte" id="email" name="email" placeholder="Enter Email"Required><br/>
+
+    <label for="">Password *</label>
+    <input type="password" id="pass1" name="pass1" placeholder="Enter Password"Required><br/>
+
+    <label for="">Confirm Password *</label>
+    <input type="password" id="pass1" name="pass1" placeholder="Confirm Password"Required><br/>
+        
+    <br/><p>* Required</p>
+    <br/><input type="submit" value="Sign Up" class="btn btn-primary"><br/>
+</form>
+    
+</center>
+{% endblock content %}
