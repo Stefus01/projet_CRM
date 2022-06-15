@@ -12,5 +12,5 @@ v Remplire base donnée produit
 v Remplire base donnée commande
 v Afficher formulaire client a remplir
 v Afficher liste clients
-v Afficher liste produit
-v Afficher liste commande
+v Afficher liste produits
+v Afficher liste commandes
